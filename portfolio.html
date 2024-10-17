@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rufai's Portfolio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#10B981", /* Green */
+              dark: "#0F172A", /* Dark background */
+              light: "#F3F4F6", /* Light text */
+            },
+            animation: {
+              float: "float 3s ease-in-out infinite",
+              fadeIn: "fadeIn 2s ease-out",
+            },
+            keyframes: {
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-15px)" },
+              },
+              fadeIn: {
+                "0%": { opacity: 0 },
+                "100%": { opacity: 1 },
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="bg-dark text-light">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full bg-dark shadow-lg z-50">
+      <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+        <a href="#" class="text-2xl font-bold flex items-center">
+          <i class="fas fa-user inline-block mr-2"></i> Devrufman Portfolio
+        </a>
+        <div class="lg:hidden">
+          <button id="menu-btn" class="focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+        <div id="menu" class="hidden lg:flex space-x-6">
+          <a href="#" class="hover:text-primary">Home</a>
+          <a href="#about" class="hover:text-primary">About</a>
+          <a href="#portfolio" class="hover:text-primary">Portfolio</a>
+          <a href="#contact" class="hover:text-primary">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="h-screen flex items-center justify-center text-center bg-gradient-to-b from-primary to-dark">
+        <div class="animate-fadeIn">
+          <h1 class="text-5xl lg:text-6xl font-extrabold mb-4 animate-float">
+            Welcome to Rufai's Portfolio
+          </h1>
+          <p class="text-lg lg:text-xl mb-8">
+            Discover the extraordinary web creations of Rufai Usman
+          </p>
+          <a
+            href="#about"
+            class="bg-green-800  hover:bg-green-700 text-dark font-medium py-3 px-6 rounded-md transition duration-300"
+          >
+            Explore More
+          </a>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="py-20 bg-primary">
+        <div class="container mx-auto px-4">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <h2 class="text-4xl font-bold mb-8">About Me</h2>
+              <p class="mb-6">
+                I'm Rufai Usman Oladimeji, an aspiring front end developer with a
+                strong commitment to creativity and functionality. My work is
+                driven by a love for coding and a desire to push boundaries in
+                web development as I embark fully on this journey.
+              </p>
+            </div>
+            <div class="flex justify-center ">
+              <img
+                src="/img/69367ilp3tl1tvmc4i9u166ed45e381e1f.jpg"
+                alt="Devrufman"
+                class="w-72 h-72 rounded-full shadow-lg object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Section -->
+      <section id="portfolio" class="py-20 bg-primary">
+        <div class="container mx-auto">
+          <h2 class="text-4xl font-bold mb-8 text-center">My Portfolio</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-green-700 bg-primary hover:bg-green-500 text-dark p-4 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:1200/1*fkNJp2ViJE1BKwjNyhZCQw.png"
+                alt="Project 1"
+                class="w-full h-48 object-cover rounded-md mb-4"
+              />
+              <h3 class="text-xl font-bold">Initiative 1 </h3>
+              <h3 class="text-gray-100">Contemporary and adaptive web design
+              </h3>
+            </div>
+            <div class="bg-green-700 bg-primary hover:bg-green-500 text-dark p-4 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
+              <img
+                src="https://www.codehim.com/wp-content/uploads/2020/10/modern-flat-design-login-form.png"
+                alt="Project 1"
+                class="w-full h-48 object-cover rounded-md mb-4"
+              />
+              <h3 class="text-xl font-bold">Initiative 2</h3>
+              <h3 class="text-gray-100">Sleek and dynamic web design</h3>
+            </div>
+            <div class="bg-green-700 bg-primary hover:bg-green-500 text-dark p-4 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
+              <img
+                src="https://onlineittuts.com/wp-content/uploads/2022/02/hqdefault.jpg"
+                alt="Project 1"
+                class="w-full h-48 object-cover rounded-md mb-4"
+              />
+              <h3 class="text-xl font-bold">Initiative 3</h3>
+              <h3 class="text-gray-100">Streamlined and versatile web design
+              </h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+       
+      <section id="contact" class="py-20 bg-gradient-to-b">
+        <div class="container mx-auto">
+          <h2 class="text-4xl font-bold mb-8 text-center">Get in Touch</h2>
+          <div class="flex space-x-8 justify-center">
+            <a
+              href="tel:+2347013673616"
+              class="text-primary hover:text-light text-4xl"
+            >
+              <i class="fas fa-phone"></i>
+            </a>
+            <a
+              href="https://wa.me/2347013673616"
+              class="text-primary hover:text-light text-4xl"
+            >
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a
+              href="mailto:rufaiusman51@gmail.com"
+              class="text-red-500 hover:text-light text-4xl"
+            >
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a
+              href="https://twitter.com/Edgerufman"
+              class="text-blue-400 hover:text-light text-4xl"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a
+              href="https://facebook.com/UsmanOladimejiRufai"
+              class="text-blue-600 hover:text-light text-4xl"
+            >
+              <i class="fab fa-facebook"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+
+    <footer class="bg-dark py-6">
+      <div class="container mx-auto text-center">
+        <p>&copy; 2024 Rufai Usman. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
